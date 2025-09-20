@@ -1,0 +1,13 @@
+Web Server (marcello targa è cula)
+1 set up connection - accept a client connection, or close if the client is unwanted
+2 Receive request - read an HTTP request message from the network 
+3 Process request - intepret the request message and take action 
+4 Access resource - access the resource specified in the message 
+5 Construct reponse - create the HTTP reponse message with the right headers
+6 Send response - send the response back to the client 
+7 Log transaction - place notes about the completed transaction in a log file
+Cache (flash memory)
+chaces reduce redundant data transfers, saving you money in network charges
+chaces reduce network bottlenecks. Pages load faster without more bandwith 
+Chaces reduce demand ib irigin servers. Servers reply faster and avoid overload
+Caches reduce distance delays, because pages load slower from farther away 
