@@ -11,3 +11,24 @@ chaces reduce redundant data transfers, saving you money in network charges
 chaces reduce network bottlenecks. Pages load faster without more bandwith 
 Chaces reduce demand ib irigin servers. Servers reply faster and avoid overload
 Caches reduce distance delays, because pages load slower from farther away 
+HTTPS
+vede il messaggio scritto 
+post (metodo) intesasanpaolo.it/bonifici HTTP/3.0
+HEADERS
+from= 200133;//Alessio
+To=200135;//Mion
+Amount=1000;//in centesimi 10€ 00 cent
+problema di proxy in ascolto senza cifratura 
+www.alessioferraretto.it
+Compu&Games P.IVA
+->215.90.29.32 dominio + certificato è una chiave pubblica
+  CODIFICA ASSIMETRICA 
+-> 1 chiave pubblica y:numero primo 
+  x*y -> dividere i numeri prmi per trovare chiava privata
+  resto
+  100%3=1
+  trovare altri numeri che fanno lo stesso resto
+  7->messaggio inviato 
+  x*y=7
+-> 1 chiave privata x:numero primo 
+  x*y*7/x*y
