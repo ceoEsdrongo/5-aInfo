@@ -1,0 +1,5 @@
+SELECT 
+studentelideo.cognome, studentelideo.idscuola,
+scuolalideo.idScuola, scuolalideo.nome
+FROM scuolalideo, studentelideo
+WHERE studentelideo.idScuola = scuolalideo.idScuola
