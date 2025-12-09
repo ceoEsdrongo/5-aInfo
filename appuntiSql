@@ -5,3 +5,4 @@ FROM scuolalideo, studentelideo
 WHERE studentelideo.idScuola = scuolalideo.idScuola
 AND scuolalideo.Nome = "Euganeo";
 AND NOT (scuolalideo.Nome = 'Euganeo' );
+AND studentelideo.Cognome="lideo";
