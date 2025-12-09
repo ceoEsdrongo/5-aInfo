@@ -13,3 +13,6 @@ AND studentelideo.Cognome="lideo";
 AND studentelideo.Cognome LIKE "M%"; -> stringa = 'valore' -> stringa LIKE '__' -> " % " -> qualsiasi carattere, " _ " -> indica un solo char (underscore), " _i% " -> tanti caratteri qualsiasi 
 --------------------
 ORDER BY studentelideo.Cognome;
+-------------------
+ORDER BY att1 -> ascendente/dicendente cognome
+att2->(stessa cosa) nome
