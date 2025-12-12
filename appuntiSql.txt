@@ -16,3 +16,13 @@ ORDER BY studentelideo.Cognome;
 -------------------
 ORDER BY att1 -> ascendente/dicendente cognome
 att2->(stessa cosa) nome
+----------------------
+  VINCOLI SUGLI ATTRIBUTI 
+Unique simile a PK ma completamente diversi. Unique è solo un attriuto dove viene fatto un controllo sull'unicità dei valori. 
+------------------
+CREATE TABLE OPERA {
+  ******** PRIMARY KEY
+  qua tutte cose (attributi)
+VINCOLI DI INTEGRITà REFERENZIALE
++ FOREIGN KEY COD MUSEO REFERENCES MUSEO(COD MUSEO)
+FOREIGN KEY COD ARTISTA REFERENCES ARTISTA(COD ARTISTA) 
