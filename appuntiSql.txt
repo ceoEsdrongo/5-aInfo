@@ -30,3 +30,6 @@ VINCOLI DI INTEGRITà REFERENZIALE
 FOREIGN KEY COD ARTISTA REFERENCES ARTISTA(COD ARTISTA) 
 };
 --------------------
+FROM artista, opera
+WHERE artista.codArtista=OPera.codArtista
+-------------------
