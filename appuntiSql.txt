@@ -33,3 +33,24 @@ FOREIGN KEY COD ARTISTA REFERENCES ARTISTA(COD ARTISTA)
 FROM artista, opera
 WHERE artista.codArtista=OPera.codArtista
 -------------------
+CREATE TABLE Dolce(
+	id_dolce int AUTO_INCREMENT PRIMARY KEY, 
+    nome varchar(60) NOT NULL UNIQUE,
+	prezzo DECIMAL(2,2) NOT NULL
+);
+
+CREATE TABLE Ingrediente(
+	id_ingrediente INT AUTO_INCREMENT PRIMARY KEY,
+	nome VARCHAR(60) not null,
+    costo_unitario DECIMAL(5,2) NOT NULL
+
+
+);
+CREATE TABLE Dolce_Ingrediente(
+	id_dolce_ingrediente INT AUTO_INCREMENT PRIMARY KEY, 
+	id_dolce INT, 
+	id_ingrediente INT, 
+    quantita INT NOT NULL,
+    FOREIGN KEY id_dolce REFERENCES Dolce.id_dolce,
+    FOREIGN KEY id_ingrediente REFERENCES Ingrediente.id_ingrediente
+);
