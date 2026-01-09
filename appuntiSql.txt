@@ -54,3 +54,10 @@ CREATE TABLE Dolce_Ingrediente(
     FOREIGN KEY id_dolce REFERENCES Dolce.id_dolce,
     FOREIGN KEY id_ingrediente REFERENCES Ingrediente.id_ingrediente
 );
+CREATE TABLE dolce_ingrediente(
+	id_dolce_ingrediente INT PRIMARY KEY AUTO_INCREMENT,
+    quantita INT(6) NOT NULL CHECK ( prezzo >0 ),
+    id_dolce INT NOT NULL REFERENCES Dolce(id_dolce),
+    id_ingrediente INT NULL REFERENCES ingrediente(id_ingrediente)
+    
+),
