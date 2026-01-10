@@ -61,3 +61,29 @@ CREATE TABLE dolce_ingrediente(
     id_ingrediente INT NULL REFERENCES ingrediente(id_ingrediente)
     
 ),
+---------------
+select nome
+from dolce
+where idcat=(select idcat
+			from categoria
+			where nome='torta')
+se la sub query restituisce 1 solo valore
+
+
+dolci di cat "torta" "brioche"
+where id cat != (select id cat
+				from categorie
+				where nome='torta'
+				or nome='brioche')
+
+se sq+ valori si usa IN 
+
+where prezzo in (10,20)
+(prezzo=10) 0r (prezzo=20)
+where idcat not in()
+
+where or 
+	  =
+	in not in 
+dolce(iddolce,nome,prezzo,idcat) idcat-> no obbligo
+where idcat isnull
