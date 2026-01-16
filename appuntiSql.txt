@@ -87,3 +87,18 @@ where or
 	in not in 
 dolce(iddolce,nome,prezzo,idcat) idcat-> no obbligo
 where idcat isnull
+---------------------------------------------------------------------------
+per fare la somma usa SELECT A,SUB(B) ------> fa la somma del valore B 
+FROM 
+GROUP A,B
+
+funzioni:
+SUM somma
+AVG media 
+
+count contail numero delle righe 
+pwe ogni dolce
+select d.nome, COUNT(*)
+group by d.nome
+HAVING MAX(COUNT(*))
+HAVING COUNT(*)>3
