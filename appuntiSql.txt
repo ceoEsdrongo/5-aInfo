@@ -102,3 +102,78 @@ select d.nome, COUNT(*)
 group by d.nome
 HAVING MAX(COUNT(*))
 HAVING COUNT(*)>3
+--------------------------------------------------------------------------
+create table Bar(
+idbar int(11) auto_increment primary key,
+nome varhcar(50) not null,
+indirizzo varchar(60) not null,
+citta varchar(60) not null,
+incassoAnnuale int not null,
+foreign key idTitolare references Titolare.idTitolare 
+);
+create table Barista(
+idBarista int(11) auto_increment primary key
+cognome varchar(50) not null,
+nome varchar(50) not null, 
+indirizzo varchar(60) not null, 
+citta varchar(60) not null, 
+provincia varhcar(50) not null,
+stipendio int not null,
+foreign key idBar references Bar.idBar
+);
+create table Titoloare(
+idTitolare int(11) auto_increment primary key,
+cognome varchar(50) not null,
+nome varchar(50) not null,
+citta varchar(60) not null,
+codiceFiscale varchar(30) not null
+);
+
+select cognome, nome
+from barista 
+where citta='Este';
+
+select nome as 'Nome Bar' 
+from Bar
+where incassoAnnuale<1000
+order by nome;
+
+select nome as 'Nome bar', indirizzo, citta
+from Bar
+where(provincia='Padova' or provincia='Vicenza');
+
+select distinct citta
+from Titolare;
+
+select count(*)
+from barista
+where stipendio>2000;
+
+select nome
+from bar
+where idTitolare=(select idTitolare
+		from titolare
+		where nome='Giovanni' and cognome='Verdi')
+and citta ='Monselice'
+order by nome asc;
+
+select B.nome as 'Nome Bar', B.indirizzo as 'Indirizzo Bar', P.citta, B.provincia, T.nome as 'Nome Titolare', T.cognome as 'cognome titolare' 
+from bar B, titolare T
+where b.idTitolare=T.idTitolare; 
+
+select B.nome,B.città, B.provincia
+from Bar B, titolare T
+where t.nome='Francesco' and t.cognome='Gialli'
+and T.idTitolare = B.idtitolare;
+
+Select Barista.nome, Barista.cognome
+From Barista, Bar B, titolare T
+where T.citta='Montagnana' and T.idtitolare=B.idTitolare and B.idBar=Barista.idBar;
+oppure 
+select nome, cognome
+from barista
+where idBar =(select idBar
+		from Bar
+		where  idTitolare in (select idtitolare
+					from titolare
+					where citta='Montagnana')
